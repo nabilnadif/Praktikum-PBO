@@ -7,7 +7,7 @@ public class PBO_2 {
 
         // Biodata Mahasigma
         String nama = "Muhammad Nabil Nadif";
-        int nim = "2407112714";
+        String nim = "2407112714";
         String alamat = "Jl. Garuda Sakti KM 3, Pekanbaru";
         int umur = 19;
         char golonganDarah = 'O';
