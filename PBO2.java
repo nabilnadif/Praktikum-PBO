@@ -1,5 +1,3 @@
-package com.pbo;
-
 public class PBO2 { // Nama kelas
     // Konstanta
     public static final int JUMLAH_SEMESTER = 2;
