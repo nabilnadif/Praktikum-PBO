@@ -1,9 +1,11 @@
+package pbo2;
+
 public class PBO2 { // Nama kelas
     // Konstanta
     public static final int JUMLAH_SEMESTER = 2;
     public static void main(String[] args) {
-
-        // Biodata Mahasigma
+        
+        // Biodata Mahasiswa
         String nama = "Khumaira Azzahra Yarman";
         String nim = "2407135529";
         String alamat = "Jl. Wijaya, Pekanbaru";
@@ -23,7 +25,6 @@ public class PBO2 { // Nama kelas
         System.out.println("Alamat         : " + alamat);
         System.out.println("Umur           : " + umur + " tahun");
         System.out.println("Golongan Darah : " + golonganDarah);
-
         System.out.println("\nIP Tiap Semester:");
         System.out.println("Semester 1 : " + ipSemester[0]);
         System.out.println("Semester 2 : " + ipSemester[1]);
