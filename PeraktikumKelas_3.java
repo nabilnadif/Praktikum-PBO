@@ -141,15 +141,15 @@ public class PeraktikumKelas_3 {
 
     //Enumerasi
     /*enum Hari {
-        Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu
+        SENIN, SELASA, RABU, KAMIS, JUMAT, SABTU, MINGGU
      }
 
-    Hari hariIni = Hari.Senin;
+    Hari hariIni = Hari.SENIN;
     
-    if (hariIni == Hari.Senin) {
+    if (hariIni == Hari.SENIN) {
         System.out.println("Hari ini adalah Senin!");
     } 
-    System.out.println("Besok adalah " + Hari.Selasa);*/
+    System.out.println("Besok adalah " + Hari.SELASA);*/
 
     }
 }
