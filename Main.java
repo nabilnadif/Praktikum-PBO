@@ -1,15 +1,22 @@
+package LatihanPraktikum_6;
+
 public class Main {
     public static void main(String[] args) {
-        Provinsi provinsi1 = new Provinsi();
-        Provinsi provinsi2 = new Provinsi("Sumatera Barat", 1945, "Padang");
-        Provinsi provinsi3 = new Provinsi("Jawa Barat", 37044.86, 1945, 80, "Bandung", "Seblak");
-        provinsi1.tampilkanInfo();
-        provinsi1.tampilkanInfo("=== Sekilas Info ===");
-        System.out.println("==============================");
-        provinsi2.tampilkanInfo();
-        provinsi2.tampilkanInfo("Fun Fact", 19);
-        System.out.println("==============================");
-        provinsi3.tampilkanInfo();
-        provinsi3.tampilkanInfo("Fakta Menarik", 72.5);
+        Bank bank = new Bank("Bank Bersama", 2);
+
+        Rekening r1 = new Rekening("Raka", 2000000);
+        Rekening r2 = new Rekening("Nabil", 1500000);
+
+        bank.tampilkanRekening();
+        System.out.println();
+
+        bank.tampilkanRekening(r1);
+        r1.setNama("Maira");
+        bank.tampilkanRekening(r1);
+
+        bank.tampilkanRekening(r2);
+        r2.setSaldo(3000000);
+        bank.tampilkanRekening(r2);
+
     }
 }
