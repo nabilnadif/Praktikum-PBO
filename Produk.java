@@ -1,52 +1,25 @@
-package HasilPraktikum_6;
+package Praktikum7;
 
-class Produk {
+public class Produk implements HargaAkhir{
+    protected String nama;
+    protected int harga;
 
-    public String nama;
-    private double harga;
-    protected int stok;
-    private String namaSuplier = "Alif";
-    static int jumlahProduk = 0;
-
-    // Constructor
-    public Produk(String nama, double harga, int stok){
+    public Produk(String nama, int harga){
         this.nama = nama;
         this.harga = harga;
-        this.stok = stok;
-        jumlahProduk++;
-    }
-    
-    // Method
-    public void tampilkanNamaSuplier(){
-        System.out.println("Nama Suplier nya adalah " + namaSuplier);
-    } 
-    public void tampilkanInfo(){
-        System.out.println("-----INFO PRODUK-----");
-        System.out.println("Nama Barang    : " +nama);
-        System.out.println("Harga Barang   : " +harga);
-        System.out.println("Stok Barang    : " +stok);
-    }
-    
-    public static void infoJumlahProduk(){
-        System.out.println("Total produk yang telah dibuat: " +jumlahProduk);
     }
 
-    // Getter dan Setter
-    public double getHarga(){
-        return harga;
+    public void tampilkanInfo() {
+        System.out.println("Nama Produk : " + nama);
+        System.out.println("Harga : " + harga);
     }
-    public void setHarga(double hargaBaru){
-        if(hargaBaru>0){
-            this.harga = hargaBaru;
-        }
-        else if(hargaBaru == 0){
-            this.harga = hargaBaru;
-            System.out.println("Produk ini gratis");
-        }
-        else{
-            System.out.println("Harga produk tidak boleh negatif !");
-        }
+
+    public double hitungPajak() {
+        return harga * 0.05;
+    }
+
+    @Override
+    public double hitungHarga() {
+        return harga * 1.05;
     }
 }
-    
-
