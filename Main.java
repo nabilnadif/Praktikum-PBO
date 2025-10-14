@@ -1,22 +1,38 @@
-package LatihanPraktikum_6;
-
 public class Main {
     public static void main(String[] args) {
-        Bank bank = new Bank("Bank Bersama", 2);
+        Player player = new Player(100, 10);
+        Goblin goblin = new Goblin(50, 5);
 
-        Rekening r1 = new Rekening("Raka", 2000000);
-        Rekening r2 = new Rekening("Nabil", 1500000);
+        System.out.println("======== Pertarungan Dimulai! ========");
+        System.out.println("Player HP: " + player.getHp() + " | Goblin HP: " + goblin.getHp());
+        System.out.println("======================================");
 
-        bank.tampilkanRekening();
-        System.out.println();
+        int round = 1;
+        while (player.getHp() > 0 && goblin.getHp() > 0) {
+            System.out.println("--- Ronde " + round + " ---");
+            
+            player.attack(goblin);
+            if (goblin.getHp() <= 0) {
+                System.out.println("Goblin telah dikalahkan!");
+                break; 
+            }
+            System.out.println("Sisa HP Goblin: " + goblin.getHp());
 
-        bank.tampilkanRekening(r1);
-        r1.setNama("Maira");
-        bank.tampilkanRekening(r1);
+            goblin.attack(player);
+            if (player.getHp() <= 0) {
+                System.out.println("Player telah dikalahkan!");
+                break; 
+            }
+            System.out.println("Sisa HP Player: " + player.getHp());
+            System.out.println("=====================================");
+            round++;
+        }
 
-        bank.tampilkanRekening(r2);
-        r2.setSaldo(3000000);
-        bank.tampilkanRekening(r2);
-
+        System.out.println("\n======== Pertarungan Selesai! ========");
+        if (player.getHp() > 0) {
+            System.out.println("The winner takes it all! Player menang!");
+        } else {
+            System.out.println("Game Over.");
+        }
     }
 }
