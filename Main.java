@@ -1,19 +1,15 @@
 public class Main {
-
     public static void main(String[] args) {
-        // Object Instantiation
-        Mobil mobil1 = new Mobil();
-        Mobil mobil2 = new Mobil();
-
-        // Constructor overloading
-        Mobil mobil4 = new Mobil();
-        Mobil mobil3 = new Mobil("hitam","Toyota", 2025);
-
-        // Method Overloading
-        Kalkulator calc = new Kalkulator();
-        System.out.println(calc.tambah(5, 3));
-        System.out.println(calc.tambah(5.5, 3.2));
-        System.out.println(calc.tambah("Hello", "World"));
+        Provinsi provinsi1 = new Provinsi();
+        Provinsi provinsi2 = new Provinsi("Sumatera Barat", 1945, "Padang");
+        Provinsi provinsi3 = new Provinsi("Jawa Barat", 37044.86, 1945, 80, "Bandung", "Seblak");
+        provinsi1.tampilkanInfo();
+        provinsi1.tampilkanInfo("=== Sekilas Info ===");
+        System.out.println("==============================");
+        provinsi2.tampilkanInfo();
+        provinsi2.tampilkanInfo("Fun Fact", 19);
+        System.out.println("==============================");
+        provinsi3.tampilkanInfo();
+        provinsi3.tampilkanInfo("Fakta Menarik", 72.5);
     }
 }
-
